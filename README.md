@@ -103,6 +103,3 @@ Este backend está diseñado para gestionar un inventario de productos pereceder
    - Implementar pruebas unitarias y de integración para garantizar la calidad del código.
 
 ---
-
-Con esta descripción y documentación, deberías estar listo para entregar tu proyecto de backend. ¿Necesitas ayuda con algún detalle adicional? 😊
-
