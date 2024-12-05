@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sistema.blog.sistemablogspring.DTOS.ProductDTO;
+import com.sistema.blog.sistemablogspring.DTOS.ProductStateDTO;
 import com.sistema.blog.sistemablogspring.Services.ProductService;
 
 @RestController
@@ -47,5 +48,11 @@ public class ProductController {
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<List<ProductStateDTO>> getProductStates() {
+        List<ProductStateDTO> productStates = productService.getProductStates();
+        return ResponseEntity.ok(productStates);
     }
 }
