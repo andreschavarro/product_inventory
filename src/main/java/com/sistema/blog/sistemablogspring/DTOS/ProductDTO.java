@@ -23,7 +23,17 @@ public class ProductDTO {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public ProductDTO(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public ProductDTO() {
+		//TODO Auto-generated constructor stub
+	}
+
 	private Long id;
     private String name;
     private String description;
+	private String imageUrl;
+
 }

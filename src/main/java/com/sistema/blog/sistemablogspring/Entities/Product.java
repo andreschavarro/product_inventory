@@ -50,6 +50,10 @@ public class Product {
 		this.updatedAt = updatedAt;
 	}
 
+	public Product(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -73,4 +77,8 @@ public class Product {
     protected void onUpdate() {
         this.updatedAt = LocalDateTime.now();
     }
+
+	@Column(name = "image_url")
+    private String imageUrl;
+
 }

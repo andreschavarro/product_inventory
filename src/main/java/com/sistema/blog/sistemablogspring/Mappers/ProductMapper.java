@@ -6,12 +6,11 @@ import com.sistema.blog.sistemablogspring.Entities.Product;
 public class ProductMapper {
 
     public static ProductDTO toDTO(Product product) {
-        if (product == null) return null;
-
         ProductDTO dto = new ProductDTO();
         dto.setId(product.getId());
         dto.setName(product.getName());
         dto.setDescription(product.getDescription());
+        dto.setImageUrl(product.getImageUrl());
         return dto;
     }
 
@@ -21,6 +20,7 @@ public class ProductMapper {
         Product product = new Product();
         product.setName(dto.getName());
         product.setDescription(dto.getDescription());
+        product.setImageUrl(dto.getImageUrl());
         return product;
     }
 }
